@@ -14,6 +14,7 @@ An iOS Safari Extension to add custom themes to a website
 | Discord.com | ✅ |
 
 
+## Images
 | APP | Extension |
 | -----------  | ----------- |
 | <img src="Screenshots/01.PNG" height="600"/> | <img src="Screenshots/02.PNG" height="600"/> |

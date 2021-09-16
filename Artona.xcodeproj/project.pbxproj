@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B426639B26F3CE53008CB54F /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = B426638426F3CE52008CB54F /* content.js */; };
+		B426639C26F3CE53008CB54F /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = B426638526F3CE52008CB54F /* popup.js */; };
+		B42663A726F3CE53008CB54F /* youtube.js in Resources */ = {isa = PBXBuildFile; fileRef = B426639226F3CE52008CB54F /* youtube.js */; };
+		B42663A826F3CE53008CB54F /* youtube.css in Resources */ = {isa = PBXBuildFile; fileRef = B426639326F3CE52008CB54F /* youtube.css */; };
+		B42663A926F3CE53008CB54F /* discord.js in Resources */ = {isa = PBXBuildFile; fileRef = B426639526F3CE52008CB54F /* discord.js */; };
+		B42663AA26F3CE53008CB54F /* discord.css in Resources */ = {isa = PBXBuildFile; fileRef = B426639626F3CE52008CB54F /* discord.css */; };
+		B42663AB26F3CE53008CB54F /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = B426639726F3CE52008CB54F /* background.js */; };
+		B42663AC26F3CE53008CB54F /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = B426639826F3CE53008CB54F /* popup.html */; };
+		B42663AD26F3CE53008CB54F /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = B426639926F3CE53008CB54F /* popup.css */; };
+		B42663AE26F3CE53008CB54F /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = B426639A26F3CE53008CB54F /* manifest.json */; };
+		B42663B926F3D605008CB54F /* icon-256.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663AF26F3D604008CB54F /* icon-256.png */; };
+		B42663BA26F3D605008CB54F /* toolbar-icon-19.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B026F3D604008CB54F /* toolbar-icon-19.png */; };
+		B42663BB26F3D605008CB54F /* icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B126F3D604008CB54F /* icon-64.png */; };
+		B42663BC26F3D605008CB54F /* toolbar-icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B226F3D604008CB54F /* toolbar-icon-32.png */; };
+		B42663BD26F3D605008CB54F /* toolbar-icon-38.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B326F3D604008CB54F /* toolbar-icon-38.png */; };
+		B42663BE26F3D605008CB54F /* icon-96.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B426F3D604008CB54F /* icon-96.png */; };
+		B42663BF26F3D605008CB54F /* toolbar-icon-16.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B526F3D604008CB54F /* toolbar-icon-16.png */; };
+		B42663C026F3D605008CB54F /* icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B626F3D605008CB54F /* icon-48.png */; };
+		B42663C126F3D605008CB54F /* icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B726F3D605008CB54F /* icon-512.png */; };
+		B42663C226F3D605008CB54F /* icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B826F3D605008CB54F /* icon-128.png */; };
+		B4FBC16626A316E10074B6C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16526A316E10074B6C4 /* AppDelegate.swift */; };
+		B4FBC17026A316E10074B6C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */; };
+		B4FBC17226A316E10074B6C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC17126A316E10074B6C4 /* ViewController.swift */; };
+		B4FBC17526A316E10074B6C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBC17326A316E10074B6C4 /* LaunchScreen.storyboard */; };
+		B4FBC17826A316E10074B6C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBC17626A316E10074B6C4 /* Main.storyboard */; };
+		B4FBC18026A316E50074B6C4 /* Artona Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B4FBC17F26A316E50074B6C4 /* Artona Extension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B4FBC18526A316E50074B6C4 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC18426A316E50074B6C4 /* SafariWebExtensionHandler.swift */; };
+		B4FBC18826A316E50074B6C4 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = B4FBC18726A316E50074B6C4 /* _locales */; };
+		B4FBC19826A316E50074B6C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FBC17926A316E50074B6C4 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B4FBC18126A316E50074B6C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4FBC15A26A316E10074B6C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4FBC17E26A316E50074B6C4;
+			remoteInfo = "Artona Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B4FBC19E26A316E50074B6C4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B4FBC18026A316E50074B6C4 /* Artona Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B426638426F3CE52008CB54F /* content.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		B426638526F3CE52008CB54F /* popup.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		B426639226F3CE52008CB54F /* youtube.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = youtube.js; sourceTree = "<group>"; };
+		B426639326F3CE52008CB54F /* youtube.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = youtube.css; sourceTree = "<group>"; };
+		B426639526F3CE52008CB54F /* discord.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = discord.js; sourceTree = "<group>"; };
+		B426639626F3CE52008CB54F /* discord.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = discord.css; sourceTree = "<group>"; };
+		B426639726F3CE52008CB54F /* background.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		B426639826F3CE53008CB54F /* popup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		B426639926F3CE53008CB54F /* popup.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		B426639A26F3CE53008CB54F /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		B42663AF26F3D604008CB54F /* icon-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-256.png"; sourceTree = "<group>"; };
+		B42663B026F3D604008CB54F /* toolbar-icon-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon-19.png"; sourceTree = "<group>"; };
+		B42663B126F3D604008CB54F /* icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-64.png"; sourceTree = "<group>"; };
+		B42663B226F3D604008CB54F /* toolbar-icon-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon-32.png"; sourceTree = "<group>"; };
+		B42663B326F3D604008CB54F /* toolbar-icon-38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon-38.png"; sourceTree = "<group>"; };
+		B42663B426F3D604008CB54F /* icon-96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-96.png"; sourceTree = "<group>"; };
+		B42663B526F3D604008CB54F /* toolbar-icon-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "toolbar-icon-16.png"; sourceTree = "<group>"; };
+		B42663B626F3D605008CB54F /* icon-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-48.png"; sourceTree = "<group>"; };
+		B42663B726F3D605008CB54F /* icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-512.png"; sourceTree = "<group>"; };
+		B42663B826F3D605008CB54F /* icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-128.png"; sourceTree = "<group>"; };
+		B438EA0D26A624F600BB7083 /* Artona.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Artona.entitlements; sourceTree = "<group>"; };
+		B438EA0E26A624F600BB7083 /* Artona Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Artona Extension.entitlements"; sourceTree = "<group>"; };
+		B438EA1026A62F1400BB7083 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		B4FBC16226A316E10074B6C4 /* Artona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artona.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FBC16526A316E10074B6C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B4FBC17126A316E10074B6C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4FBC17426A316E10074B6C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4FBC17726A316E10074B6C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4FBC17926A316E50074B6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4FBC17A26A316E50074B6C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4FBC17F26A316E50074B6C4 /* Artona Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Artona Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FBC18426A316E50074B6C4 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		B4FBC18726A316E50074B6C4 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		B4FBC19726A316E50074B6C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4FBC15F26A316E10074B6C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBC17C26A316E50074B6C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B426638626F3CE52008CB54F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B42663B626F3D605008CB54F /* icon-48.png */,
+				B42663B126F3D604008CB54F /* icon-64.png */,
+				B42663B426F3D604008CB54F /* icon-96.png */,
+				B42663B826F3D605008CB54F /* icon-128.png */,
+				B42663AF26F3D604008CB54F /* icon-256.png */,
+				B42663B726F3D605008CB54F /* icon-512.png */,
+				B42663B526F3D604008CB54F /* toolbar-icon-16.png */,
+				B42663B026F3D604008CB54F /* toolbar-icon-19.png */,
+				B42663B226F3D604008CB54F /* toolbar-icon-32.png */,
+				B42663B326F3D604008CB54F /* toolbar-icon-38.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		B426639126F3CE52008CB54F /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				B426639226F3CE52008CB54F /* youtube.js */,
+				B426639326F3CE52008CB54F /* youtube.css */,
+			);
+			path = Youtube;
+			sourceTree = "<group>";
+		};
+		B426639426F3CE52008CB54F /* Discord */ = {
+			isa = PBXGroup;
+			children = (
+				B426639526F3CE52008CB54F /* discord.js */,
+				B426639626F3CE52008CB54F /* discord.css */,
+			);
+			path = Discord;
+			sourceTree = "<group>";
+		};
+		B4FBC15926A316E10074B6C4 = {
+			isa = PBXGroup;
+			children = (
+				B4FBC16426A316E10074B6C4 /* Artona */,
+				B4FBC18326A316E50074B6C4 /* Artona Extension */,
+				B4FBC16326A316E10074B6C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4FBC16326A316E10074B6C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4FBC16226A316E10074B6C4 /* Artona.app */,
+				B4FBC17F26A316E50074B6C4 /* Artona Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4FBC16426A316E10074B6C4 /* Artona */ = {
+			isa = PBXGroup;
+			children = (
+				B438EA0D26A624F600BB7083 /* Artona.entitlements */,
+				B4FBC16526A316E10074B6C4 /* AppDelegate.swift */,
+				B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */,
+				B4FBC17126A316E10074B6C4 /* ViewController.swift */,
+				B4FBC17326A316E10074B6C4 /* LaunchScreen.storyboard */,
+				B4FBC17626A316E10074B6C4 /* Main.storyboard */,
+				B4FBC17926A316E50074B6C4 /* Assets.xcassets */,
+				B4FBC17A26A316E50074B6C4 /* Info.plist */,
+			);
+			path = Artona;
+			sourceTree = "<group>";
+		};
+		B4FBC18326A316E50074B6C4 /* Artona Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B438EA0E26A624F600BB7083 /* Artona Extension.entitlements */,
+				B4FBC18426A316E50074B6C4 /* SafariWebExtensionHandler.swift */,
+				B4FBC19726A316E50074B6C4 /* Info.plist */,
+				B4FBC18626A316E50074B6C4 /* Resources */,
+			);
+			path = "Artona Extension";
+			sourceTree = "<group>";
+		};
+		B4FBC18626A316E50074B6C4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B426639726F3CE52008CB54F /* background.js */,
+				B426638426F3CE52008CB54F /* content.js */,
+				B426639426F3CE52008CB54F /* Discord */,
+				B426638626F3CE52008CB54F /* images */,
+				B426639A26F3CE53008CB54F /* manifest.json */,
+				B426639926F3CE53008CB54F /* popup.css */,
+				B426639826F3CE53008CB54F /* popup.html */,
+				B426638526F3CE52008CB54F /* popup.js */,
+				B426639126F3CE52008CB54F /* Youtube */,
+				B4FBC18726A316E50074B6C4 /* _locales */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4FBC16126A316E10074B6C4 /* Artona */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FBC19F26A316E50074B6C4 /* Build configuration list for PBXNativeTarget "Artona" */;
+			buildPhases = (
+				B4FBC15E26A316E10074B6C4 /* Sources */,
+				B4FBC15F26A316E10074B6C4 /* Frameworks */,
+				B4FBC16026A316E10074B6C4 /* Resources */,
+				B4FBC19E26A316E50074B6C4 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4FBC18226A316E50074B6C4 /* PBXTargetDependency */,
+			);
+			name = Artona;
+			productName = Artona;
+			productReference = B4FBC16226A316E10074B6C4 /* Artona.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B4FBC17E26A316E50074B6C4 /* Artona Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FBC19B26A316E50074B6C4 /* Build configuration list for PBXNativeTarget "Artona Extension" */;
+			buildPhases = (
+				B4FBC17B26A316E50074B6C4 /* Sources */,
+				B4FBC17C26A316E50074B6C4 /* Frameworks */,
+				B4FBC17D26A316E50074B6C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Artona Extension";
+			productName = "Artona Extension";
+			productReference = B4FBC17F26A316E50074B6C4 /* Artona Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4FBC15A26A316E10074B6C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					B4FBC16126A316E10074B6C4 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					B4FBC17E26A316E50074B6C4 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = B4FBC15D26A316E10074B6C4 /* Build configuration list for PBXProject "Artona" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4FBC15926A316E10074B6C4;
+			productRefGroup = B4FBC16326A316E10074B6C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4FBC16126A316E10074B6C4 /* Artona */,
+				B4FBC17E26A316E50074B6C4 /* Artona Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4FBC16026A316E10074B6C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FBC17826A316E10074B6C4 /* Main.storyboard in Resources */,
+				B4FBC17526A316E10074B6C4 /* LaunchScreen.storyboard in Resources */,
+				B4FBC19826A316E50074B6C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBC17D26A316E50074B6C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42663AD26F3CE53008CB54F /* popup.css in Resources */,
+				B42663AE26F3CE53008CB54F /* manifest.json in Resources */,
+				B42663B926F3D605008CB54F /* icon-256.png in Resources */,
+				B42663C026F3D605008CB54F /* icon-48.png in Resources */,
+				B42663BF26F3D605008CB54F /* toolbar-icon-16.png in Resources */,
+				B426639B26F3CE53008CB54F /* content.js in Resources */,
+				B42663BA26F3D605008CB54F /* toolbar-icon-19.png in Resources */,
+				B42663AA26F3CE53008CB54F /* discord.css in Resources */,
+				B42663BB26F3D605008CB54F /* icon-64.png in Resources */,
+				B42663C126F3D605008CB54F /* icon-512.png in Resources */,
+				B42663BD26F3D605008CB54F /* toolbar-icon-38.png in Resources */,
+				B42663C226F3D605008CB54F /* icon-128.png in Resources */,
+				B426639C26F3CE53008CB54F /* popup.js in Resources */,
+				B42663AB26F3CE53008CB54F /* background.js in Resources */,
+				B42663BC26F3D605008CB54F /* toolbar-icon-32.png in Resources */,
+				B42663A826F3CE53008CB54F /* youtube.css in Resources */,
+				B42663AC26F3CE53008CB54F /* popup.html in Resources */,
+				B4FBC18826A316E50074B6C4 /* _locales in Resources */,
+				B42663A926F3CE53008CB54F /* discord.js in Resources */,
+				B42663A726F3CE53008CB54F /* youtube.js in Resources */,
+				B42663BE26F3D605008CB54F /* icon-96.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4FBC15E26A316E10074B6C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FBC17226A316E10074B6C4 /* ViewController.swift in Sources */,
+				B4FBC16626A316E10074B6C4 /* AppDelegate.swift in Sources */,
+				B4FBC17026A316E10074B6C4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FBC17B26A316E50074B6C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FBC18526A316E50074B6C4 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B4FBC18226A316E50074B6C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B4FBC17E26A316E50074B6C4 /* Artona Extension */;
+			targetProxy = B4FBC18126A316E50074B6C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B4FBC17326A316E10074B6C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4FBC17426A316E10074B6C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B4FBC17626A316E10074B6C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4FBC17726A316E10074B6C4 /* Base */,
+				B438EA1026A62F1400BB7083 /* en */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4FBC19926A316E50074B6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4FBC19A26A316E50074B6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4FBC19C26A316E50074B6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Artona Extension/Artona Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8YT4LAQ84;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Artona Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Artona;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omeasraf.artona.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4FBC19D26A316E50074B6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Artona Extension/Artona Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8YT4LAQ84;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Artona Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Artona;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.omeasraf.artona.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B4FBC1A026A316E50074B6C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8YT4LAQ84;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Artona/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Artona;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omeasraf.artona;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B4FBC1A126A316E50074B6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8YT4LAQ84;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Artona/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Artona;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omeasraf.artona;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4FBC15D26A316E10074B6C4 /* Build configuration list for PBXProject "Artona" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FBC19926A316E50074B6C4 /* Debug */,
+				B4FBC19A26A316E50074B6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4FBC19B26A316E50074B6C4 /* Build configuration list for PBXNativeTarget "Artona Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FBC19C26A316E50074B6C4 /* Debug */,
+				B4FBC19D26A316E50074B6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4FBC19F26A316E50074B6C4 /* Build configuration list for PBXNativeTarget "Artona" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FBC1A026A316E50074B6C4 /* Debug */,
+				B4FBC1A126A316E50074B6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4FBC15A26A316E10074B6C4 /* Project object */;
+}

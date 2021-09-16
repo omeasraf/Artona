@@ -1,0 +1,49 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    padding: 10px;
+    width: 90%;
+/*    height:450px;*/
+    font-family: system-ui;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.container{
+    width: 100%;
+    margin-top: 10px;
+}
+
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+.container {
+    text-align: left;
+}
+
+#content{
+    text-align: left;
+}
+
+hr {
+    border: 0.5px solid rgb(29, 29, 29);
+    border-radius: 1px;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #171717;
+        color: white;
+    }
+}

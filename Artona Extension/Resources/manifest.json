@@ -28,7 +28,7 @@
             ]
         },
         {
-            "js": ["youtube.js"],
+            "js": ["youtube.js", "youtubeAdBlock.js"],
             "css": ["youtube.css"],
             "matches": [
                 "*://*.youtube.com/*",

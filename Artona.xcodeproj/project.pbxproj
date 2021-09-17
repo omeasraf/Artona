@@ -27,6 +27,7 @@
 		B42663C026F3D605008CB54F /* icon-48.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B626F3D605008CB54F /* icon-48.png */; };
 		B42663C126F3D605008CB54F /* icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B726F3D605008CB54F /* icon-512.png */; };
 		B42663C226F3D605008CB54F /* icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B826F3D605008CB54F /* icon-128.png */; };
+		B42DB41626F5182F001EBCDF /* youtubeAdBlock.js in Resources */ = {isa = PBXBuildFile; fileRef = B42DB41526F5182F001EBCDF /* youtubeAdBlock.js */; };
 		B4FBC16626A316E10074B6C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16526A316E10074B6C4 /* AppDelegate.swift */; };
 		B4FBC17026A316E10074B6C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */; };
 		B4FBC17226A316E10074B6C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC17126A316E10074B6C4 /* ViewController.swift */; };
@@ -83,6 +84,7 @@
 		B42663B626F3D605008CB54F /* icon-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-48.png"; sourceTree = "<group>"; };
 		B42663B726F3D605008CB54F /* icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-512.png"; sourceTree = "<group>"; };
 		B42663B826F3D605008CB54F /* icon-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-128.png"; sourceTree = "<group>"; };
+		B42DB41526F5182F001EBCDF /* youtubeAdBlock.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = youtubeAdBlock.js; sourceTree = "<group>"; };
 		B438EA0D26A624F600BB7083 /* Artona.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Artona.entitlements; sourceTree = "<group>"; };
 		B438EA0E26A624F600BB7083 /* Artona Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Artona Extension.entitlements"; sourceTree = "<group>"; };
 		B438EA1026A62F1400BB7083 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		B426639126F3CE52008CB54F /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
+				B42DB41526F5182F001EBCDF /* youtubeAdBlock.js */,
 				B426639226F3CE52008CB54F /* youtube.js */,
 				B426639326F3CE52008CB54F /* youtube.css */,
 			);
@@ -326,6 +329,7 @@
 				B42663A926F3CE53008CB54F /* discord.js in Resources */,
 				B42663A726F3CE53008CB54F /* youtube.js in Resources */,
 				B42663BE26F3D605008CB54F /* icon-96.png in Resources */,
+				B42DB41626F5182F001EBCDF /* youtubeAdBlock.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

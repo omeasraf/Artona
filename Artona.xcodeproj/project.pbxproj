@@ -28,11 +28,12 @@
 		B42663C126F3D605008CB54F /* icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B726F3D605008CB54F /* icon-512.png */; };
 		B42663C226F3D605008CB54F /* icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B826F3D605008CB54F /* icon-128.png */; };
 		B42DB41626F5182F001EBCDF /* youtubeAdBlock.js in Resources */ = {isa = PBXBuildFile; fileRef = B42DB41526F5182F001EBCDF /* youtubeAdBlock.js */; };
+		B443010E26F64254000A2225 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443010D26F64254000A2225 /* FeedbackViewController.swift */; };
 		B481705526F527F7005F4773 /* twitter.js in Resources */ = {isa = PBXBuildFile; fileRef = B481705426F527F7005F4773 /* twitter.js */; };
 		B481705726F52805005F4773 /* twitter.css in Resources */ = {isa = PBXBuildFile; fileRef = B481705626F52805005F4773 /* twitter.css */; };
 		B4FBC16626A316E10074B6C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16526A316E10074B6C4 /* AppDelegate.swift */; };
 		B4FBC17026A316E10074B6C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */; };
-		B4FBC17226A316E10074B6C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC17126A316E10074B6C4 /* ViewController.swift */; };
+		B4FBC17226A316E10074B6C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC17126A316E10074B6C4 /* HomeViewController.swift */; };
 		B4FBC17526A316E10074B6C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBC17326A316E10074B6C4 /* LaunchScreen.storyboard */; };
 		B4FBC17826A316E10074B6C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FBC17626A316E10074B6C4 /* Main.storyboard */; };
 		B4FBC18026A316E50074B6C4 /* Artona Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B4FBC17F26A316E50074B6C4 /* Artona Extension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -90,12 +91,13 @@
 		B438EA0D26A624F600BB7083 /* Artona.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Artona.entitlements; sourceTree = "<group>"; };
 		B438EA0E26A624F600BB7083 /* Artona Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Artona Extension.entitlements"; sourceTree = "<group>"; };
 		B438EA1026A62F1400BB7083 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		B443010D26F64254000A2225 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		B481705426F527F7005F4773 /* twitter.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = twitter.js; sourceTree = "<group>"; };
 		B481705626F52805005F4773 /* twitter.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = twitter.css; sourceTree = "<group>"; };
 		B4FBC16226A316E10074B6C4 /* Artona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FBC16526A316E10074B6C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4FBC17126A316E10074B6C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4FBC17126A316E10074B6C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B4FBC17426A316E10074B6C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4FBC17726A316E10074B6C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4FBC17926A316E50074B6C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -193,7 +195,8 @@
 				B438EA0D26A624F600BB7083 /* Artona.entitlements */,
 				B4FBC16526A316E10074B6C4 /* AppDelegate.swift */,
 				B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */,
-				B4FBC17126A316E10074B6C4 /* ViewController.swift */,
+				B4FBC17126A316E10074B6C4 /* HomeViewController.swift */,
+				B443010D26F64254000A2225 /* FeedbackViewController.swift */,
 				B4FBC17326A316E10074B6C4 /* LaunchScreen.storyboard */,
 				B4FBC17626A316E10074B6C4 /* Main.storyboard */,
 				B4FBC17926A316E50074B6C4 /* Assets.xcassets */,
@@ -356,9 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4FBC17226A316E10074B6C4 /* ViewController.swift in Sources */,
+				B4FBC17226A316E10074B6C4 /* HomeViewController.swift in Sources */,
 				B4FBC16626A316E10074B6C4 /* AppDelegate.swift in Sources */,
 				B4FBC17026A316E10074B6C4 /* SceneDelegate.swift in Sources */,
+				B443010E26F64254000A2225 /* FeedbackViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artona/Info.plist;
@@ -620,7 +624,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artona/Info.plist;

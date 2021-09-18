@@ -1,8 +1,11 @@
 setInterval(setupModifiers, 1000)
 setInterval(applyTheme, 3000)
 
+const names = ["backgroundColor", "titleBarColor", "titleIconColor", "textBoxColor", "textIconColor"];
+
+const duplicateHell = ["discord-backgroundColor", "discord-titleBarColor", "discord-titleIconColor", "discord-textBoxColor", "discord-textIconColor"];
+
 function applyTheme() {
-    const names = ["backgroundColor", "titleBarColor", "titleIconColor", "textBoxColor", "textIconColor"];
 
     const length = names.length;
 
@@ -126,7 +129,13 @@ browser.runtime.sendMessage({
 
 browser.runtime.onMessage.addListener((msg, sender, response) => {
     if ((msg.from === 'popup') && (msg.subject === 'sitename')) {
-        response("Discord.com");
+        response({
+            "siteName": window.location.hostname,
+            "tag": "discord-"
+        });
+    } 
+    else if ((msg.from === 'popup') && (msg.subject === 'getAllTags')) {
+        response(duplicateHell);
     } else if ((msg.from === 'popup') && (msg.subject === 'getContent')) {
         response({
             html: `
@@ -164,7 +173,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
             // do for now, will refactor later.
             
             backgroundColor.addEventListener("change", (e) => {
-                chrome.tabs.sendMessage(
+                browser.tabs.sendMessage(
                     tabs[0].id, {
                         from: 'discord',
                         subject: 'backgroundColor',
@@ -175,7 +184,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
                     });
             });
             titleBar.addEventListener("change", (e) => {
-                chrome.tabs.sendMessage(
+                browser.tabs.sendMessage(
                     tabs[0].id, {
                         from: 'discord',
                         subject: 'titleBarColor',
@@ -186,7 +195,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
                     });
             });
             titleIconColor.addEventListener("change", (e) => {
-                chrome.tabs.sendMessage(
+                browser.tabs.sendMessage(
                     tabs[0].id, {
                         from: 'discord',
                         subject: 'titleIconColor',
@@ -197,7 +206,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
                     });
             });
             textBoxColor.addEventListener("change", (e) => {
-                chrome.tabs.sendMessage(
+                browser.tabs.sendMessage(
                     tabs[0].id, {
                         from: 'discord',
                         subject: 'textBoxColor',
@@ -208,7 +217,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
                     });
             });
             textIconColor.addEventListener("change", (e) => {
-                chrome.tabs.sendMessage(
+                browser.tabs.sendMessage(
                     tabs[0].id, {
                         from: 'discord',
                         subject: 'textIconColor',
@@ -267,11 +276,11 @@ function applyData(msg) {
 }
 
 function setData(data) {
-    chrome.storage.sync.set(data);
+    browser.storage.sync.set(data);
 }
 
 function getData(name) {
-    chrome.storage.sync.get(name, function (items) {
+    browser.storage.sync.get(name, function (items) {
         applyData(items[name]);
     });
 }

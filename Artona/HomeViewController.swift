@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Artona
 //
 //  Created by Ome Asraf on 7/17/21.
@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import SafariServices
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     

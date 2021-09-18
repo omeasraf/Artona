@@ -82,7 +82,7 @@ function runBlockYoutube() {
                 '#__ffYoutube4',
                 '#feed-pyv-container',
                 '#feedmodule-PRO',
-                '#homepage-chrome-side-promo',
+                '#homepage-browser-side-promo',
                 '#merch-shelf',
                 '#offer-module',
                 '#pla-shelf > ytd-pla-shelf-renderer[class="style-scope ytd-watch"]',

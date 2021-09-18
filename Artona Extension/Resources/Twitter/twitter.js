@@ -1,8 +1,7 @@
 setInterval(applyTheme, 1000)
 
-var didSetStorage = false;
-
-const tagNames = ["background", "headerBar", "headerButtonColor", "cardBackgroundColor", "cardExtrasTextColor", "cardUserName", "cardTextColor", "cardVerifiedIcon"];
+const tagNames = ["background", "headerBar", "headerButtonColor", "cardBackgroundColor", "cardExtrasTextColor", "cardUserName", "cardTextColor", "cardVerifiedIcon", "cardTagColors"];
+const duplicateHell = ["twitter-background", "twitter-headerBar", "twitter-headerButtonColor", "twitter-cardBackgroundColor", "twitter-cardExtrasTextColor", "twitter-cardUserName", "twitter-cardTextColor", "twitter-cardVerifiedIcon", "twitter-cardTagColors"];
 
 function applyTheme() {
 
@@ -15,11 +14,14 @@ function applyTheme() {
 
 browser.runtime.onMessage.addListener((msg, sender, response) => {
     if ((msg.from === 'popup') && (msg.subject === 'sitename')) {
-        response("Twitter.com");
-    } else if ((msg.from === 'popup') && (msg.subject === 'getContent')) {
-
-
-        // TODO: Make the color changes reflect in the ui
+        response({
+            "siteName": window.location.hostname,
+            "tag": "twitter-"
+        });
+    } else if ((msg.from === 'popup') && (msg.subject === 'getAllTags')) {
+        response(duplicateHell);
+    }
+    else if ((msg.from === 'popup') && (msg.subject === 'getContent')) {
         response({
             html: `
             <div>
@@ -54,8 +56,8 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
                 <label for="cardVerifiedIcon">Verified Sign</label>
             </div>
             <div>
-                <input type="color" id="cardExtrasTextColor" name="cardExtrasTextColor" value="#FFFFFF">
-                <label for="cardExtrasTextColor">Extra Text Color</label>
+                <input type="color" id="cardTagColors" name="cardTagColors" value="#0000FF">
+                <label for="cardTagColors">Tag & Hashtags</label>
             </div>
 
         `,
@@ -69,6 +71,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
             var cardUserName = document.getElementById("cardUserName");
             var cardTextColor = document.getElementById("cardTextColor");
             var cardVerifiedIcon = document.getElementById("cardVerifiedIcon");
+            var cardTagColors = document.getElementById("cardTagColors");
 
 
             // I know I most likely should be using a for loop but this will
@@ -162,6 +165,17 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
                         console.log(info);
                     });
             });
+            cardTagColors.addEventListener("change", (e) => {
+                browser.tabs.sendMessage(
+                    tabs[0].id, {
+                        from: 'twitter',
+                        subject: 'cardTagColors',
+                        string: document.getElementById("cardTagColors").value
+                    },
+                    function (info) {
+                        console.log(info);
+                    });
+            });
 `
         });
     } else {
@@ -214,18 +228,6 @@ function applyData(msg) {
         setData({
             "twitter-cardBackgroundColor": msg
         });
-    } else if ((msg.from === 'twitter') && (msg.subject === 'cardExtrasTextColor')) {
-
-        var allExtraTexts = document.querySelectorAll(".r-14j79pv");
-        var length = allExtraTexts.length;
-        for (var i = 0; i < length; i++) {
-            allExtraTexts[i].style.color = msg.string;
-        }
-
-
-        setData({
-            "twitter-cardTextColor": msg
-        });
     } else if ((msg.from === 'twitter') && (msg.subject === 'cardUserName')) {
 
         var allUsernames = document.querySelectorAll('a.css-4rbku5.css-18t94o4.css-1dbjc4n.r-1loqt21.r-1wbh5a2.r-dnmrzs.r-1ny4l3l span.css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0');
@@ -239,22 +241,39 @@ function applyData(msg) {
         });
     } else if ((msg.from === 'twitter') && (msg.subject === 'cardTextColor')) {
 
-        document.querySelector(".css-901oao").style.color = msg.string;
+        var allTexts = document.querySelectorAll('.css-901oao.r-1fmj7o5.r-37j5jr.r-1b43r93.r-16dba41.r-hjklzo.r-bcqeeo.r-bnwqim.r-qvutc0');
+        var length = allTexts.length;
+        for (var i = 0; i < length; i++) {
+            allTexts[i].style.color = msg.string;
+        }
         setData({
             "twitter-cardTextColor": msg
         });
     } else if ((msg.from === 'twitter') && (msg.subject === 'cardVerifiedIcon')) {
 
-        var allVerifiedSigns = document.querySelectorAll('.r-1cvl2hr');
+        var allVerifiedSigns = document.querySelectorAll('.r-1fmj7o5.r-4qtqp9.r-yyyyoo.r-1xvli5t.r-9cviqr.r-ea8lvw.r-1o7j8w5.r-bnwqim.r-1plcrui.r-lrvibr');
         var length = allVerifiedSigns.length;
         for (var i = 0; i < length; i++) {
             allVerifiedSigns[i].style.color = msg.string;
         }
-        
+
         setData({
             "twitter-cardVerifiedIcon": msg
         });
-    } 
+    } else if ((msg.from === 'twitter') && (msg.subject === 'cardTagColors')) {
+
+        var allVerifiedSigns = document.querySelectorAll('.r-1n1174f');
+        var length = allVerifiedSigns.length;
+        for (var i = 0; i < length; i++) {
+            allVerifiedSigns[i].style.color = msg.string;
+        }
+
+        setData({
+            "twitter-cardTagColors": msg
+        });
+    }
+
+
 
 }
 

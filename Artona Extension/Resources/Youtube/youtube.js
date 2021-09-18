@@ -3,6 +3,7 @@ setInterval(applyTheme, 1000)
 var didSetStorage = false;
 
 const tagNames = ["backgroundColor", "headerBar", "headerIconColor", "selectedChipColor", "selectedChipTextColor", "unselectedChipColor", "unselectedChipTextColor", "chipBarColor", "thumnailBottomColor", "thumnailBottomTextColor", "bottomBarSelectedIcon", "bottomBarUnselectedIcon", "bottomBarTextColor", "bottomBarColor"];
+const duplicateHell = ["youtube-backgroundColor", "youtube-headerBar", "youtube-headerIconColor", "youtube-selectedChipColor", "youtube-selectedChipTextColor", "youtube-unselectedChipColor", "youtube-unselectedChipTextColor", "youtube-chipBarColor", "youtube-thumnailBottomColor", "youtube-thumnailBottomTextColor", "youtube-bottomBarSelectedIcon", "youtube-bottomBarUnselectedIcon", "youtube-bottomBarTextColor", "youtube-bottomBarColor"];
 
 function applyTheme() {
 
@@ -16,16 +17,23 @@ function applyTheme() {
 
 browser.runtime.onMessage.addListener((msg, sender, response) => {
     if ((msg.from === 'popup') && (msg.subject === 'sitename')) {
-        response("Youtube.com");
-    } else if ((msg.from === 'popup') && (msg.subject === 'getContent')) {
+        response({
+            "siteName": window.location.hostname,
+            "tag": "youtube-"
+        });
+    } 
+    else if ((msg.from === 'popup') && (msg.subject === 'getAllTags')) {
+        response(duplicateHell);
+    }
+    else if ((msg.from === 'popup') && (msg.subject === 'getContent')) {
 
 
         // TODO: Make the color changes reflect in the ui
         response({
             html: `
             <div>
-                <input type="color" id="background" name="background" value="#171a21">
-                <label for="background">Background</label>
+                <input type="color" id="backgroundColor" name="backgroundColor" value="#171a21">
+                <label for="backgroundColor">Background</label>
             </div>
             <hr>
             <div>
@@ -90,7 +98,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
         `,
             js: `
             // TODO: Refactor
-            var backgroundColor = document.getElementById("background");
+            var backgroundColor = document.getElementById("backgroundColor");
             var headerBar = document.getElementById("headerBar");
             var headerIconColor = document.getElementById("headerIconColor");
             var selectedChipColor = document.getElementById("selectedChipColor");
@@ -114,7 +122,7 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
                     tabs[0].id, {
                         from: 'youtube',
                         subject: 'backgroundColor',
-                        string: document.getElementById("background").value
+                        string: document.getElementById("backgroundColor").value
                     },
                     function (info) {
                         console.log(info);

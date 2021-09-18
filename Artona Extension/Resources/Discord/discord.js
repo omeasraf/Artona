@@ -7,7 +7,7 @@ function applyTheme() {
     const length = names.length;
 
     for (var i = 0; i < length; i++) {
-        getData(names[i]);
+        getData("discord-" + names[i]);
     }
 
 }
@@ -232,13 +232,13 @@ function applyData(msg) {
         document.querySelector(".scrollerContent-WzeG7R.content-3YMskv").style.backgroundColor = msg.string;
         document.querySelector('.form-2fGMdU').style.backgroundColor = msg.string;
         setData({
-            "backgroundColor": msg
+            "discord-backgroundColor": msg
         });
     } else if ((msg.from === 'discord') && (msg.subject === 'titleBarColor')) {
 
         document.querySelector(".title-3qD0b-.container-1r6BKw.themed-ANHk51").style.backgroundColor = msg.string;
         setData({
-            "titleBarColor": msg
+            "discord-titleBarColor": msg
         });
     } else if ((msg.from === 'discord') && (msg.subject === 'titleIconColor')) {
 
@@ -250,18 +250,18 @@ function applyData(msg) {
         document.querySelector(".clickable-3rdHwn .icon-22AiRD").style.color = msg.string;
 
         setData({
-            "titleIconColor": msg
+            "discord-titleIconColor": msg
         });
     } else if ((msg.from === 'discord') && (msg.subject === 'textBoxColor')) {
         document.querySelector(".scrollableContainer-2NUZem").style.backgroundColor = msg.string;
         setData({
-            "textBoxColor": msg
+            "discord-textBoxColor": msg
         });
     } else if ((msg.from === 'discord') && (msg.subject === 'textIconColor')) {
 
         document.querySelector(".attachButtonPlus-jWVFah").style.fill = msg.string;
         setData({
-            "textIconColor": msg
+            "discord-textIconColor": msg
         });
     }
 }

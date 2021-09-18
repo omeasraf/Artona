@@ -28,6 +28,8 @@
 		B42663C126F3D605008CB54F /* icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B726F3D605008CB54F /* icon-512.png */; };
 		B42663C226F3D605008CB54F /* icon-128.png in Resources */ = {isa = PBXBuildFile; fileRef = B42663B826F3D605008CB54F /* icon-128.png */; };
 		B42DB41626F5182F001EBCDF /* youtubeAdBlock.js in Resources */ = {isa = PBXBuildFile; fileRef = B42DB41526F5182F001EBCDF /* youtubeAdBlock.js */; };
+		B481705526F527F7005F4773 /* twitter.js in Resources */ = {isa = PBXBuildFile; fileRef = B481705426F527F7005F4773 /* twitter.js */; };
+		B481705726F52805005F4773 /* twitter.css in Resources */ = {isa = PBXBuildFile; fileRef = B481705626F52805005F4773 /* twitter.css */; };
 		B4FBC16626A316E10074B6C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16526A316E10074B6C4 /* AppDelegate.swift */; };
 		B4FBC17026A316E10074B6C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */; };
 		B4FBC17226A316E10074B6C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC17126A316E10074B6C4 /* ViewController.swift */; };
@@ -88,6 +90,8 @@
 		B438EA0D26A624F600BB7083 /* Artona.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Artona.entitlements; sourceTree = "<group>"; };
 		B438EA0E26A624F600BB7083 /* Artona Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Artona Extension.entitlements"; sourceTree = "<group>"; };
 		B438EA1026A62F1400BB7083 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		B481705426F527F7005F4773 /* twitter.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = twitter.js; sourceTree = "<group>"; };
+		B481705626F52805005F4773 /* twitter.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = twitter.css; sourceTree = "<group>"; };
 		B4FBC16226A316E10074B6C4 /* Artona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FBC16526A316E10074B6C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +160,15 @@
 			path = Discord;
 			sourceTree = "<group>";
 		};
+		B481705326F527E4005F4773 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				B481705426F527F7005F4773 /* twitter.js */,
+				B481705626F52805005F4773 /* twitter.css */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
 		B4FBC15926A316E10074B6C4 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +216,7 @@
 		B4FBC18626A316E50074B6C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B481705326F527E4005F4773 /* Twitter */,
 				B426639726F3CE52008CB54F /* background.js */,
 				B426638426F3CE52008CB54F /* content.js */,
 				B426639426F3CE52008CB54F /* Discord */,
@@ -325,9 +339,11 @@
 				B42663BC26F3D605008CB54F /* toolbar-icon-32.png in Resources */,
 				B42663A826F3CE53008CB54F /* youtube.css in Resources */,
 				B42663AC26F3CE53008CB54F /* popup.html in Resources */,
+				B481705526F527F7005F4773 /* twitter.js in Resources */,
 				B4FBC18826A316E50074B6C4 /* _locales in Resources */,
 				B42663A926F3CE53008CB54F /* discord.js in Resources */,
 				B42663A726F3CE53008CB54F /* youtube.js in Resources */,
+				B481705726F52805005F4773 /* twitter.css in Resources */,
 				B42663BE26F3D605008CB54F /* icon-96.png in Resources */,
 				B42DB41626F5182F001EBCDF /* youtubeAdBlock.js in Resources */,
 			);
@@ -507,7 +523,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Artona Extension/Artona Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Artona Extension/Info.plist";
@@ -535,7 +551,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Artona Extension/Artona Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Artona Extension/Info.plist";
@@ -566,7 +582,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artona/Info.plist;
@@ -604,7 +620,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artona/Info.plist;

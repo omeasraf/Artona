@@ -34,6 +34,20 @@
                 "*://*.youtube.com/*",
                 "*://youtube.com/*"
             ]
+        },
+        {
+            "js": ["twitter.js"],
+            "css": ["twitter.css"],
+            "matches": [
+                "*://*.twitter.com/*",
+                "*://twitter.com/*"
+            ]
+        },
+        {
+            "js": ["content.js"],
+            "matches": [
+                "<all_urls>"
+            ]
         }
     ],
 

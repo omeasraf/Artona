@@ -1,5 +1,17 @@
 Thank you for choosing to test Artona, please join our discord server in order to get support or request new sites to be added.
 
+Beta 8:
+- Better Twitter.com integration
+
+Beta 7:
+- Fixed Discord.com
+
+Beta 6:
+- Improved storage retrieval method
+- Improved Twitter.com integration
+- Broke discord.com (Will be fixed in a future beta)
+
+
 Beta 5:
 - Made the color changes reflect on Artona popup after a page reload
 - Better Twitter.com integration

@@ -36,7 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 subject: 'getAllTags'
             },
             function (tags) {
-                console.log(tags);
                 if (tags != undefined) {
                     alert(tags)
                     browser.storage.sync.get(tags, function (items) {

@@ -31,6 +31,7 @@
 		B443010E26F64254000A2225 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B443010D26F64254000A2225 /* FeedbackViewController.swift */; };
 		B481705526F527F7005F4773 /* twitter.js in Resources */ = {isa = PBXBuildFile; fileRef = B481705426F527F7005F4773 /* twitter.js */; };
 		B481705726F52805005F4773 /* twitter.css in Resources */ = {isa = PBXBuildFile; fileRef = B481705626F52805005F4773 /* twitter.css */; };
+		B4A2DD9C26FE722100A79395 /* blockAMP.js in Resources */ = {isa = PBXBuildFile; fileRef = B4A2DD9B26FE722100A79395 /* blockAMP.js */; };
 		B4FBC16626A316E10074B6C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16526A316E10074B6C4 /* AppDelegate.swift */; };
 		B4FBC17026A316E10074B6C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */; };
 		B4FBC17226A316E10074B6C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FBC17126A316E10074B6C4 /* HomeViewController.swift */; };
@@ -94,6 +95,7 @@
 		B443010D26F64254000A2225 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		B481705426F527F7005F4773 /* twitter.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = twitter.js; sourceTree = "<group>"; };
 		B481705626F52805005F4773 /* twitter.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = twitter.css; sourceTree = "<group>"; };
+		B4A2DD9B26FE722100A79395 /* blockAMP.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = blockAMP.js; sourceTree = "<group>"; };
 		B4FBC16226A316E10074B6C4 /* Artona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artona.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FBC16526A316E10074B6C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FBC16F26A316E10074B6C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +173,14 @@
 			path = Twitter;
 			sourceTree = "<group>";
 		};
+		B4A2DD9A26FE720E00A79395 /* AMP */ = {
+			isa = PBXGroup;
+			children = (
+				B4A2DD9B26FE722100A79395 /* blockAMP.js */,
+			);
+			path = AMP;
+			sourceTree = "<group>";
+		};
 		B4FBC15926A316E10074B6C4 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		B4FBC18626A316E50074B6C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B4A2DD9A26FE720E00A79395 /* AMP */,
 				B481705326F527E4005F4773 /* Twitter */,
 				B426639726F3CE52008CB54F /* background.js */,
 				B426638426F3CE52008CB54F /* content.js */,
@@ -327,6 +338,7 @@
 			files = (
 				B42663AD26F3CE53008CB54F /* popup.css in Resources */,
 				B42663AE26F3CE53008CB54F /* manifest.json in Resources */,
+				B4A2DD9C26FE722100A79395 /* blockAMP.js in Resources */,
 				B42663B926F3D605008CB54F /* icon-256.png in Resources */,
 				B42663C026F3D605008CB54F /* icon-48.png in Resources */,
 				B42663BF26F3D605008CB54F /* toolbar-icon-16.png in Resources */,
@@ -586,7 +598,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artona/Info.plist;
@@ -624,7 +636,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Artona/Artona.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = S8YT4LAQ84;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artona/Info.plist;

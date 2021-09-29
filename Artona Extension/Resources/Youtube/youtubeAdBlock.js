@@ -21,6 +21,8 @@
  * The function that implements all the logic.
  * Returns the run status.
  */
+
+console.log("Running...")
 function runBlockYoutube() {
     const locales = {
         en: {
@@ -269,6 +271,7 @@ function runBlockYoutube() {
         const jsonOverride = (propertyName, overrideValue) => {
             const nativeJSONParse = JSON.parse;
             JSON.parse = (...args) => {
+                console.log(args);
                 const obj = nativeJSONParse.apply(this, args);
 
                 // Override it's props and return back to the caller

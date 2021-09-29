@@ -1,23 +1,27 @@
 setInterval(setupModifiers, 1000)
 setInterval(applyTheme, 3000)
 
-const names = ["backgroundColor", "titleBarColor", "titleIconColor", "textBoxColor", "textIconColor"];
 
-const duplicateHell = ["discord-backgroundColor", "discord-titleBarColor", "discord-titleIconColor", "discord-textBoxColor", "discord-textIconColor"];
+const tagNames = ["discord-backgroundColor", "discord-titleBarColor", "discord-titleIconColor", "discord-textBoxColor", "discord-textIconColor"];
 
 function applyTheme() {
 
-    const length = names.length;
+    const length = tagNames.length;
 
-    for (var i = 0; i < length; i++) {
-        getData("discord-" + names[i]);
-    }
+    browser.storage.sync.get(tagNames, function (items) {
+        for (var i = 0; i < length; i++) {
+            var tagName = tagNames[i];
+            var item = items[tagName];
+            if (item != undefined){
+                applyData(item);
+            }
+        }
+    });
 
 }
 
 function setupModifiers() {
     setupMembersArea();
-    getData();
     var giftButton = document.querySelector('[aria-label="Send a gift"]');
     var stickersButton = document.querySelector('[aria-label="Open sticker picker"]')
     var gifButton = document.querySelector('[aria-label="Open GIF picker"]')
@@ -133,9 +137,9 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
             "siteName": window.location.hostname,
             "tag": "discord-"
         });
-    } 
+    }
     else if ((msg.from === 'popup') && (msg.subject === 'getAllTags')) {
-        response(duplicateHell);
+        response(tagNames);
     } else if ((msg.from === 'popup') && (msg.subject === 'getContent')) {
         response({
             html: `
@@ -277,10 +281,4 @@ function applyData(msg) {
 
 function setData(data) {
     browser.storage.sync.set(data);
-}
-
-function getData(name) {
-    browser.storage.sync.get(name, function (items) {
-        applyData(items[name]);
-    });
 }

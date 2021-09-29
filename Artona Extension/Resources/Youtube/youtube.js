@@ -1,17 +1,22 @@
 setInterval(applyTheme, 1000)
 
-var didSetStorage = false;
 
-const tagNames = ["backgroundColor", "headerBar", "headerIconColor", "selectedChipColor", "selectedChipTextColor", "unselectedChipColor", "unselectedChipTextColor", "chipBarColor", "thumnailBottomColor", "thumnailBottomTextColor", "bottomBarSelectedIcon", "bottomBarUnselectedIcon", "bottomBarTextColor", "bottomBarColor"];
-const duplicateHell = ["youtube-backgroundColor", "youtube-headerBar", "youtube-headerIconColor", "youtube-selectedChipColor", "youtube-selectedChipTextColor", "youtube-unselectedChipColor", "youtube-unselectedChipTextColor", "youtube-chipBarColor", "youtube-thumnailBottomColor", "youtube-thumnailBottomTextColor", "youtube-bottomBarSelectedIcon", "youtube-bottomBarUnselectedIcon", "youtube-bottomBarTextColor", "youtube-bottomBarColor"];
+
+const tagNames = ["youtube-backgroundColor", "youtube-headerBar", "youtube-headerIconColor", "youtube-selectedChipColor", "youtube-selectedChipTextColor", "youtube-unselectedChipColor", "youtube-unselectedChipTextColor", "youtube-chipBarColor", "youtube-thumnailBottomColor", "youtube-thumnailBottomTextColor", "youtube-bottomBarSelectedIcon", "youtube-bottomBarUnselectedIcon", "youtube-bottomBarTextColor", "youtube-bottomBarColor"];
 
 function applyTheme() {
 
     const length = tagNames.length;
 
-    for (var i = 0; i < length; i++) {
-        getData("youtube-" + tagNames[i]);
-    }
+    browser.storage.sync.get(tagNames, function (items) {
+        for (var i = 0; i < length; i++) {
+            var tagName = tagNames[i];
+            var item = items[tagName];
+            if (item != undefined){
+                applyData(item);
+            }
+        }
+    });
 
 }
 
@@ -21,9 +26,9 @@ browser.runtime.onMessage.addListener((msg, sender, response) => {
             "siteName": window.location.hostname,
             "tag": "youtube-"
         });
-    } 
+    }
     else if ((msg.from === 'popup') && (msg.subject === 'getAllTags')) {
-        response(duplicateHell);
+        response(tagNames);
     }
     else if ((msg.from === 'popup') && (msg.subject === 'getContent')) {
 
@@ -399,10 +404,4 @@ function applyData(msg) {
 
 function setData(data) {
     browser.storage.sync.set(data);
-}
-
-function getData(name) {
-    browser.storage.sync.get(name, function (items) {
-        applyData(items[name]);
-    });
 }

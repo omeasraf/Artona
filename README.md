@@ -12,6 +12,7 @@ An iOS Safari Extension to add custom themes to a website
 | --- | ----------- |
 | Youtube.com | ✅ |
 | Discord.com | ✅ |
+| Twitter.com | ✅ |
 
 
 ## Images
